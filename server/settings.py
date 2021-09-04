@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-&_302w7+d1@#0x1px3828oy1(%4h-$-p5g7ge&tiu%&f-qx7l@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['accenture-api.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['https://accenture-back.herokuapp.com', 'accenture-back.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
