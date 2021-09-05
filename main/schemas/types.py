@@ -1,5 +1,5 @@
 from graphene_django import DjangoObjectType
-from main.models import ExtendedUser, Portfolio, Security
+from main.models import ExtendedUser, Portfolio, Security, VolumeSecurity
 
 class UserType(DjangoObjectType):
     class Meta:
@@ -25,10 +25,13 @@ class PortfolioType(DjangoObjectType):
             "risk",
             "year_income",
             "securities",
+            "volume_securities",
             "recommended_securities",
             "date_created",
             "name",
-            "year_change"
+            "year_change",
+            "capm",
+            "volatility"
         )
 
 class SecurityType(DjangoObjectType):
@@ -47,4 +50,12 @@ class SecurityType(DjangoObjectType):
             "debt_load",
             "capm",
             "spoint"
+        )
+
+class VolumeType(DjangoObjectType):
+    class Meta:
+        model = VolumeSecurity
+        fields = (
+            "security",
+            "portfolio"
         )
